@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parameter suite-crossbrowser testing">
+	<test thread-count="5" name="chrome">
+		<parameter name="browser" value="chrome" />
+		<parameter name="base_url" value="https://demowebshop.tricentis.com/" />
+		<parameter name="uName" value="alby123@gmail.com" />
+		<parameter name="pWord" value="asd123" />
+		<classes>
+			<class name="SeleniumwithTestNg.DemoWebShop">
+				<methods>
+					<exclude name="TC_001_verifyObsquraTitle" />
+					<include name="TC_002_verifyLogin" />
+					<include name="TC_004_verifyTitleFromExcelSheet" />
+					<exclude name="TC_006_verifyLoginWithInvalidDatas" />
+					<exclude name="TC_010_verifyLoginWithValidDatasUsingParameters" />
+					<exclude name="TC_011_verifyRegisterPageFromExcelSheetAndMailAsRandomGenrator" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="firefox">
+		<parameter name="browser" value="firefox" />
+		<parameter name="base_url" value="https://demowebshop.tricentis.com/" />
+		<parameter name="uName" value="alby123@gmail.com" />
+		<parameter name="pWord" value="asd123" />
+		<classes>
+			<class name="SeleniumwithTestNg.DemoWebShop">
+				<methods>
+					<exclude name="TC_001_verifyObsquraTitle" />
+					<exclude name="TC_002_verifyLogin" />
+					<exclude name="TC_004_verifyTitleFromExcelSheet" />
+					<include name="TC_006_verifyLoginWithInvalidDatas" />
+					<exclude name="TC_010_verifyLoginWithValidDatasUsingParameters" />
+					<exclude name="TC_011_verifyRegisterPageFromExcelSheetAndMailAsRandomGenrator" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

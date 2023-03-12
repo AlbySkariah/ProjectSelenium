@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Parameter suite-parallel testing]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="parallel(failed)">
+    <parameter name="uName" value="alby123@gmail.com"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="base_url" value="https://demowebshop.tricentis.com/"/>
+    <parameter name="pWord" value="asd123"/>
+    <groups>
+      <run>
+        <include name="Regression"/>
+        <exclude name="Sanity"/>
+        <exclude name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="SeleniumwithTestNg.DemoWebShop">
+        <methods>
+          <include name="TC_004_verifyTitleFromExcelSheet"/>
+          <include name="TC_011_verifyRegisterPageFromExcelSheetAndMailAsRandomGenrator"/>
+          <include name="TC_001_verifyObsquraTitle"/>
+          <include name="TC_002_verifyLogin"/>
+          <include name="TC_006_verifyLoginWithInvalidDatas" invocation-numbers="0 1 2"/>
+          <include name="TC_010_verifyLoginWithValidDatasUsingParameters" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- SeleniumwithTestNg.DemoWebShop -->
+    </classes>
+  </test> <!-- parallel(failed) -->
+</suite> <!-- Failed suite [Parameter suite-parallel testing] -->

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Parameter suite-crossbrowser testing]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="firefox(failed)">
+    <parameter name="uName" value="alby123@gmail.com"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="base_url" value="https://demowebshop.tricentis.com/"/>
+    <parameter name="pWord" value="asd123"/>
+    <classes>
+      <class name="SeleniumwithTestNg.DemoWebShop">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="TC_006_verifyLoginWithInvalidDatas"/>
+        </methods>
+      </class> <!-- SeleniumwithTestNg.DemoWebShop -->
+    </classes>
+  </test> <!-- firefox(failed) -->
+</suite> <!-- Failed suite [Parameter suite-crossbrowser testing] -->

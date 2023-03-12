@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Parameter suite-parallel testing">
+	<test thread-count="2" name="parallel" parallel="methods">
+		<parameter name="browser" value="chrome" />
+		<parameter name="base_url" value="https://demowebshop.tricentis.com/" />
+		<parameter name="uName" value="alby123@gmail.com" />
+		<parameter name="pWord" value="asd123" />
+		<groups>
+		<run>
+		<include name="Regression"/>
+		<exclude name="Sanity"/>
+		<include name="Smoke"/>
+		</run>
+		</groups>
+		<classes>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
